@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#ded3c2">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Wedding of Ashraf & Esraa</title>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#ded3c2;--card:#f8f4ee;--ink:#4a443b;--rose:#8a7f74;--gold:#a8946f;--soft:#e9e1d4;--line:#d6c9b6;--sage:#a39a8f;--leaf:#e6dfd3;--petal:#eddbd5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#26231f;--card:#2f2b26;--ink:#ece8d6;--rose:#bdb2a5;--gold:#cdb890;--soft:#3a352e;--line:#4d463c;--sage:#a89e92;--leaf:#4a433a;--petal:#5b4642}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#26231f;--card:#2f2b26;--ink:#ece8d6;--rose:#bdb2a5;--gold:#cdb890;--soft:#3a352e;--line:#4d463c;--sage:#a89e92;--leaf:#4a433a;--petal:#5b4642}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Amiri',serif;line-height:1.9;display:flex;justify-content:center;padding:20px 14px 40px;background-image:radial-gradient(circle at 12% 8%,var(--soft),transparent 40%),radial-gradient(circle at 92% 92%,var(--soft),transparent 40%)}
+body.en{font-family:'Cormorant Garamond',serif;font-size:19px}
+.lang{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);left:12px;z-index:30;background:var(--card);color:var(--ink);border:1px solid var(--gold);border-radius:999px;padding:3px 14px;font:inherit;font-size:15px;cursor:pointer}
+.card{position:relative;overflow:hidden;width:100%;max-width:460px;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:10px;box-shadow:0 18px 50px rgba(100,88,75,.15);margin-top:34px;opacity:0;transform:translateY(14px);transition:.9s}
+body.open .card{opacity:1;transform:none}
+.inner{border:1px solid var(--line);border-radius:20px;padding:104px 22px 100px;text-align:center;position:relative}
+.fl{position:absolute;width:150px;height:150px;pointer-events:none;opacity:.95}
+.tl{top:0;left:0}.tr{top:0;right:0;transform:scaleX(-1)}.bl{bottom:0;left:0;transform:scaleY(-1)}.br{bottom:0;right:0;transform:scale(-1,-1)}
+.gold{color:var(--gold)}.rose{color:var(--rose)}
+.fancy{font-family:'Aref Ruqaa','Amiri',serif}
+body.en .fancy{font-family:'Cormorant Garamond',serif;font-style:italic}
+.verse{font-size:17px;margin:0 4px}
+.names{margin:12px 0 6px;line-height:1.35}
+.names b{display:block;font-size:44px;font-weight:700}
+.names i{display:block;font-size:26px;color:var(--gold);font-style:normal}
+.div{display:flex;align-items:center;gap:10px;margin:20px 16px;color:var(--gold)}
+.div::before,.div::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+h2{font-size:24px;margin:0 0 4px;font-weight:700}
+.big{font-size:26px;font-weight:700;margin:0}
+.addr{direction:ltr;font-size:15px;opacity:.85;line-height:1.7;margin:4px 6px 0}
+.qr{margin:20px auto 10px;width:fit-content;padding:14px;background:#fff;border-radius:18px;border:1px solid var(--line);box-shadow:0 6px 18px rgba(100,88,75,.12)}
+#qr{width:168px;height:168px;display:grid;place-items:center}
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.btn{display:inline-block;text-decoration:none;border:0;cursor:pointer;color:#fff;background:linear-gradient(135deg,var(--rose),var(--gold));padding:10px 24px;border-radius:999px;font:inherit;font-size:17px;box-shadow:0 8px 20px rgba(120,105,90,.3)}
+.btn.o{background:none;color:var(--ink);border:1px solid var(--gold);box-shadow:none}
+.cd{display:flex;gap:8px;justify-content:center;margin-top:10px}
+.cd div{flex:1;max-width:76px;border:1px solid var(--line);border-radius:14px;padding:8px 0;background:var(--soft)}
+.cd b{display:block;font-size:26px;line-height:1.2}.cd span{font-size:13px;opacity:.8}
+.hide{display:none!important}
+#seal{position:fixed;inset:0;z-index:50;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:24px;transition:opacity .8s,visibility .8s;background-image:radial-gradient(circle at 50% 40%,var(--soft),transparent 60%)}
+body.open #seal{opacity:0;visibility:hidden}
+.stamp{width:128px;height:128px;border-radius:50%;border:0;cursor:pointer;background:radial-gradient(circle at 35% 30%,#cbc1b4,#8a7f73 70%);color:#fff;font:700 38px 'Cormorant Garamond',serif;box-shadow:0 10px 30px rgba(100,88,75,.4),inset 0 0 0 6px rgba(255,255,255,.25);animation:pulse 2.2s infinite}
+@keyframes pulse{50%{transform:scale(1.06)}}
+.foot{margin-top:26px;font-size:20px}
+</style>
+</head>
+<body class="en">
+
+<div id="seal">
+  <div class="gold" data-x="A Special Invitation">A Special Invitation</div>
+  <div class="fancy names" style="font-size:34px"><span data-x="Ashraf & Esraa">Ashraf & Esraa</span></div>
+  <button class="stamp" id="open" aria-label="open">A &amp; E</button>
+  <div class="gold" data-x="Tap the seal to open">Tap the seal to open</div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="spray" viewBox="0 0 160 160">
+<g fill="none" stroke="var(--sage)" stroke-width="1.2" stroke-linecap="round"><path d="M4 6C40 20 70 50 92 102"/><path d="M4 42C30 52 50 72 58 112"/><path d="M34 4C62 14 100 30 132 62"/></g>
+<g fill="var(--leaf)" stroke="var(--sage)" stroke-width="1"><ellipse cx="30" cy="22" rx="14" ry="5" transform="rotate(30 30 22)"/><ellipse cx="55" cy="42" rx="15" ry="5" transform="rotate(55 55 42)"/><ellipse cx="74" cy="72" rx="14" ry="5" transform="rotate(75 74 72)"/><ellipse cx="22" cy="58" rx="13" ry="4.5" transform="rotate(40 22 58)"/><ellipse cx="46" cy="86" rx="13" ry="4.5" transform="rotate(70 46 86)"/><ellipse cx="82" cy="30" rx="14" ry="5" transform="rotate(28 82 30)"/><ellipse cx="108" cy="46" rx="14" ry="5" transform="rotate(42 108 46)"/><ellipse cx="120" cy="66" rx="12" ry="4.5" transform="rotate(70 120 66)"/></g>
+<g fill="var(--petal)" stroke="var(--sage)" stroke-width="1"><g transform="translate(92 106)"><ellipse cy="-13" rx="8" ry="13"/><ellipse cy="-13" rx="8" ry="13" transform="rotate(72)"/><ellipse cy="-13" rx="8" ry="13" transform="rotate(144)"/><ellipse cy="-13" rx="8" ry="13" transform="rotate(216)"/><ellipse cy="-13" rx="8" ry="13" transform="rotate(288)"/><circle r="4" fill="var(--gold)" stroke="none"/></g>
+<g transform="translate(46 44) scale(.62)"><ellipse cy="-13" rx="8" ry="13"/><ellipse cy="-13" rx="8" ry="13" transform="rotate(72)"/><ellipse cy="-13" rx="8" ry="13" transform="rotate(144)"/><ellipse cy="-13" rx="8" ry="13" transform="rotate(216)"/><ellipse cy="-13" rx="8" ry="13" transform="rotate(288)"/><circle r="4" fill="var(--gold)" stroke="none"/></g></g>
+<g fill="var(--gold)"><circle cx="128" cy="92" r="2"/><circle cx="14" cy="96" r="2"/><circle cx="104" cy="14" r="2"/></g></symbol></defs></svg>
+<main class="card">
+<svg class="fl tl"><use href="#spray"/></svg><svg class="fl tr"><use href="#spray"/></svg><svg class="fl bl"><use href="#spray"/></svg><svg class="fl br"><use href="#spray"/></svg>
+<div class="inner">
+  <p class="verse gold" dir="rtl" lang="ar" style="font-family:'Amiri',serif">﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ﴾<br><small>سورة الروم · 21</small></p>
+  <div class="div">✦</div>
+  <p class="rose fancy" style="font-size:20px;margin:0" data-x="You are warmly invited to celebrate the wedding of">You are warmly invited to celebrate the wedding of</p>
+  <div class="names fancy"><b data-x="Ashraf">Ashraf</b><i>&amp;</i><b data-x="Esraa">Esraa</b></div>
+  <p data-x="Your presence completes our joy" style="margin:0">Your presence completes our joy</p>
+
+  <section id="when" class="hide">
+    <div class="div">✦</div>
+    <h2 class="rose fancy" data-x="Date &amp; Time">Date &amp; Time</h2>
+    <p class="big" id="dateTxt"></p><p id="timeTxt" style="margin:0"></p>
+    <div class="cd" id="cd">
+      <div><b id="d">0</b><span data-x="days">days</span></div>
+      <div><b id="h">0</b><span data-x="hours">hours</span></div>
+      <div><b id="m">0</b><span data-x="min">min</span></div>
+      <div><b id="s">0</b><span data-x="sec">sec</span></div>
+    </div>
+  </section>
+
+  <div class="div">✦</div>
+  <h2 class="rose fancy" data-x="Venue">Venue</h2>
+  <p class="big">SKAS Venue</p>
+  <p class="addr">Ahmed Orabi, Obour, Cairo</p>
+  <div class="qr"><div id="qr"></div></div>
+  <p style="font-size:15px;opacity:.8;margin:0" data-x="Scan to open the location on the map">Scan to open the location on the map</p>
+  <div class="btns">
+    <a class="btn" href="https://maps.app.goo.gl/oZBZGgcoHcVBpZoM9" target="_blank" rel="noopener" data-x="Open Map">Open Map</a>
+    <button class="btn o" id="share" data-x="Share on WhatsApp">Share on WhatsApp</button>
+  </div>
+  <div class="foot gold fancy" data-x="We can’t wait to see you 🤍">We can’t wait to see you 🤍</div>
+</div></main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+// ===== Invitation date/time (local time) =====
+var EVENT_START = "2026-12-24T17:00";   // e.g. "2026-12-04T19:00"
+var EVENT_END_TEXT = "";  // e.g. "until 10:00 PM" (optional)
+// ==================================================================
+var MAP='https://maps.app.goo.gl/oZBZGgcoHcVBpZoM9', en=true;
+var $=function(i){return document.getElementById(i)};
+try{new QRCode($('qr'),{text:MAP,width:168,height:168,colorDark:'#4a443b',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M})}catch(e){}
+$('open').onclick=function(){document.body.classList.add('open')};
+function setLang(){
+  document.documentElement.lang=en?'en':'ar';document.documentElement.dir=en?'ltr':'rtl';
+  document.body.classList.toggle('en',en);
+    fmt();
+}
+function fmt(){
+  if(!EVENT_START)return;var d=new Date(EVENT_START),l=en?'en-GB':'ar-EG';
+  $('when').classList.remove('hide');
+  $('dateTxt').textContent=d.toLocaleDateString(l,{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+  $('timeTxt').textContent=d.toLocaleTimeString(l,{hour:'numeric',minute:'2-digit'})+(EVENT_END_TEXT?' · '+EVENT_END_TEXT:'');
+}
+function tick(){
+  if(!EVENT_START)return;var t=new Date(EVENT_START)-new Date();
+  if(t<0){$('cd').classList.add('hide');return}
+  var f=function(n){return Math.floor(n)};
+  $('d').textContent=f(t/864e5);$('h').textContent=f(t/36e5%24);$('m').textContent=f(t/6e4%60);$('s').textContent=f(t/1e3%60);
+}
+setLang();tick();setInterval(tick,1000);
+$('share').onclick=function(){
+  var m=(en?'You are warmly invited to the wedding of Ashraf & Esraa 💍\nView the invitation: ':'يسعدنا دعوتكم لحضور حفل زفاف أشرف وإسراء 💍\nرابط الدعوة: ')+location.href;
+  window.open('https://wa.me/?text='+encodeURIComponent(m),'_blank');
+};
+</script>
+</body>
+</html>
